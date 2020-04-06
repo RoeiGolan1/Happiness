@@ -1,0 +1,26 @@
+﻿{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+
+    <div dir="rtl">
+        <h2>{{ title }}</h2>
+        <h3>{{ message }}</h3>
+
+        <span>להורדת מאגר הנתונים לחץ</span>
+        <a href="https://www.kaggle.com/unsdsn/world-happiness#2016.csv">כאן</a>
+
+
+        מקור מאגר הנתונים הוא אתר /www.kaggle.com המתאר את מידת האושר במדינות שונות בעולם
+        <br /><br />
+        המקור נאמן כי....
+        <br /><br />
+        
+
+        <h3><a href="{{ url_for('HappinessData') }}">Happiness Dataset</a></h3>  
+
+
+    </div>
+
+{% endblock %}
