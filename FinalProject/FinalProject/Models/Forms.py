@@ -23,3 +23,9 @@ class CollapseForm(FlaskForm):
     submit2 = SubmitField('Collapse')
     name="Collapse" 
     value="Collapse"
+
+class HapinessForm(FlaskForm):
+    parmeter1 = SelectField('Select parmeter 1:' , validators = [DataRequired])
+    parmeter2 = SelectField('Select parmeter 2:' , validators = [DataRequired])
+    countries = SelectMultipleField('Select Multiple:' , validators = [DataRequired])
+    submit = SubmitField('submit')
