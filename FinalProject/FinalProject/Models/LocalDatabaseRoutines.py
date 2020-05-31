@@ -33,6 +33,6 @@ class LocalDatabaseServiceRoutines(object):
      
     def AddNewUser(self, User):
         df = self.ReadCSVUsersDB()
-        dfNew = pd.DataFrame([[User.firstname.data, User.lastname.data, User.phonenumber.data, User.emailaddress.data, User.username.data, User.password.data]], columns=['firstname', 'lastname', 'phonenumber', 'emailaddress',  'username', 'password'])
+        dfNew = pd.DataFrame([[User.FirstName.data, User.LastName.data, User.PhoneNum.data, User.EmailAddr.data, User.username.data, User.password.data]], columns=['firstname', 'lastname', 'phonenumber', 'emailaddress',  'username', 'password'])
         dfComplete = df.append(dfNew, ignore_index=True)
         self.WriteCSVToFile_users(dfComplete)

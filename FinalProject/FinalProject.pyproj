@@ -31,6 +31,9 @@
     <Compile Include="FinalProject\Models\LocalDatabaseRoutines.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FinalProject\Models\__pycache__\module1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FinalProject\__init__.py" />
     <Compile Include="FinalProject\views.py" />
@@ -49,10 +52,13 @@
   <ItemGroup>
     <Content Include="FinalProject\Models\__pycache__\Forms.cpython-38.pyc" />
     <Content Include="FinalProject\static\Data\HappinessData.csv" />
+    <Content Include="FinalProject\static\Data\users.csv" />
     <Content Include="FinalProject\static\Data\‏‏HappinessData - עותק.csv" />
     <Content Include="FinalProject\templates\database.html" />
     <Content Include="FinalProject\templates\data.html" />
+    <Content Include="FinalProject\templates\login.html" />
     <Content Include="FinalProject\templates\query.html" />
+    <Content Include="FinalProject\templates\register.html" />
     <Content Include="requirements.txt" />
     <Content Include="FinalProject\static\content\bootstrap.css" />
     <Content Include="FinalProject\static\content\bootstrap.min.css" />

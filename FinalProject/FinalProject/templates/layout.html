@@ -9,7 +9,7 @@
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
-<body>
+<body><!-- creates navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -22,11 +22,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <!-- puts all my pages that are needed on navbar -->
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('database') }}">מאגר הנתונים</a></li>
-                    <li><a href="{{ url_for('query') }}">query</a></li>
+                    <li><a href="{{ url_for('Login') }}">query</a></li>
+                    <li><a href="{{ url_for('Register') }}">register</a></li>
+                    <li><a href="{{ url_for('Login') }}">login</a></li>
                 </ul>
             </div>
         </div>

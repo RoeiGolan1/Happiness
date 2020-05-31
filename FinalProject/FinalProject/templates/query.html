@@ -8,6 +8,7 @@
     <div class="col-md-4">
         <form method="post">
             {{ form1.csrf_token }}
+            <!-- User chooses out of three categories  -->
             {{ wtf.form_field(form1.parmeter1)}}
             {{ wtf.form_field(form1.parmeter2)}}
             {{ wtf.form_field(form1.countries)}}
@@ -16,7 +17,8 @@
     </div>
     <div class="col-md-8">
         <div class="row">
-            <h4>Heppiness by parmeter</h4>
+            <h4>Happiness by parmeter</h4>
+            <!-- Creates chart for selected categories -->
             <img src={{ chart }} class="img-thumbnail" alt="not found">
         </div>
     </div>
