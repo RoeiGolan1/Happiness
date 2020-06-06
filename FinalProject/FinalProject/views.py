@@ -79,9 +79,16 @@ def HappinessData():
     """Renders the about page."""
     # data = pd.read_csv(path.join(path.dirname(__file__), 'static\\data\\HappinessData.csv'))
     #reads csv
-    data = pd.read_csv(path.join(path.dirname(__file__), 'static/data/HappinessData.csv'))
+    df = pd.read_csv(path.join(path.dirname(__file__), 'static/data/HappinessData.csv'))
     raw_data_table = ''
-    raw_data_table = data.to_html(classes = 'table table-hover')    
+    #if the user presses submit
+    if request.method == 'POST':
+        #if the user clicks on expand the data base will now be shown on the page
+        if request.form['action'] == 'Expand' and form1.validate_on_submit():
+            raw_data_table = df.to_html(classes = 'table table-hover')
+        #if the user clicks on collapse the data base will be removed
+        if request.form['action'] == 'Collapse' and form2.validate_on_submit():
+            raw_data_table = ''
 
     return render_template(
         'data.html',
@@ -151,7 +158,6 @@ def Register():
             db_table = ""
 
             flash('Thanks for registering new user - '+ form.FirstName.data + " " + form.LastName.data )
-            return redirect('Query')
         else:
             flash('Error: User with this Username already exist ! - '+ form.username.data)
             form = UserRegistrationFormStructure(request.form)
